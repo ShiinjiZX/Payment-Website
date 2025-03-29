@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBSITE PAYMENT</title>
+    <title id="header-title">WEBSITE PAYMENT</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="https://files.catbox.moe/ew33a6.jpg">
@@ -23,9 +23,7 @@
     <header>
         <h1 id="site-title">WEBSITE PAYMENT</h1>
         <div id="marquee-container">
-            <div id="marquee-text">SELAMAT DATANG DI WEB PAYMENT SHIINKZY</div>
-			
-			
+            <div id="marquee-text" id="welcome-message">SELAMAT DATANG DI WEB PAYMENT SHIINKZY</div>
         </div>
     </header>
     
@@ -33,23 +31,42 @@
     <section id="payment">
         <h3>Pilih Metode Pembayaran</h3>
         
-        <button class="button large-button" onclick="copyToClipboard('Dana')">
+        <button class="button uniform-button" onclick="copyToClipboard('Dana')">
             <i class="fa-solid fa-wallet"></i> Dana
         </button>
 
-        <button class="button large-button" onclick="copyToClipboard('Ovo')">
+        <button class="button uniform-button" onclick="copyToClipboard('Ovo')">
             <i class="fa-solid fa-mobile-alt"></i> Ovo
         </button>
 
-        <button class="button large-button" onclick="copyToClipboard('Gopay')">
+        <button class="button uniform-button" onclick="copyToClipboard('Gopay')">
             <i class="fa-solid fa-money-bill-wave"></i> Gopay
         </button>
 
         <br>
 
         <!-- QRIS BUTTON -->
-        <a id="qris-link" class="button large-button" target="_blank">
+        <a id="qris-link" class="button uniform-button" target="_blank">
             <i class="fa-solid fa-qrcode"></i> QRIS
+        </a>
+
+        <!-- DONASI LINK -->
+        <h3>Donasi Link</h3>
+        
+        <a id="saweria-link" class="button small-button" href="#" target="_blank">
+            <i class="fa-solid fa-donate"></i> Saweria
+        </a>
+        
+        <a id="buymeacoffee-link" class="button small-button" href="#" target="_blank">
+            <i class="fa-solid fa-coffee"></i> Buy MAC
+        </a>
+        
+        <a class="button small-button" href="https://trakteer.id/" target="_blank">
+            <i class="fa-solid fa-mug-hot"></i> Trakteer
+        </a>
+        
+        <a class="button small-button" href="https://www.patreon.com/" target="_blank">
+            <i class="fa-brands fa-patreon"></i> Patreon
         </a>
     </section>
 
@@ -57,10 +74,11 @@
     <footer>
         <section id="contact">
             <h3>Hubungi Saya</h3>
-            <a class="button small-button" href="https://wa.me/6281248845231" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            
+            <a class="button small-button contact-button" id="wa-button" href="#" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WA
             </a>
-            <a class="button small-button" href="mailto:ikyyoffc@gmail.com">
+            <a class="button small-button contact-button" id="email-button" href="#">
                 <i class="fa-solid fa-envelope"></i> Email
             </a>
         </section>
@@ -73,5 +91,13 @@
 
     <!-- SCRIPT -->
     <script src="kyykzy.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("wa-button").href = config.whatsapp;
+            document.getElementById("email-button").href = config.email;
+            document.getElementById("site-title").textContent = config.headerTitle;
+            document.getElementById("marquee-text").textContent = config.welcomeMessage;
+        });
+    </script>
 </body>
 </html>
