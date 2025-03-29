@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // LINK DONATE SAMA QRIS || UBAH PAKE PUNYA LU
     const config = {
 		qris: "https://files.catbox.moe/ew33a6.jpg",
-        saweria: "https://saweria.co/asu",
-        buymeacoffee: "https://www.buymeacoffee.com/asi",
-        trakteer: "https://trakteer.id/usu",
-        patreon: "https://www.patreon.com/sus"
+        saweria: "https://saweria.co/",
+        buymeacoffee: "https://www.buymeacoffee.com/shiinkzy",
+        trakteer: "https://trakteer.id/",
+        patreon: "https://www.patreon.com/"
     };
 
     // GAUSAH DI APA-APAIN NANTI EMROR LAGI
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // NOMOR PAYMENT LU NOH
     window.copyToClipboard = function(paymentName) {
         let paymentNumbers = {
-            'Dana': '081234567890',
-            'Ovo': '081234567891',
-            'Gopay': '081234567892'
+            'Dana': '081246493375',
+            'Ovo': '081248845231',
+            'Gopay': '081248845231'
         };
         
         let number = paymentNumbers[paymentName];
