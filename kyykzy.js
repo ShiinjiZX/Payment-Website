@@ -1,32 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Konfigurasi link yang bisa diubah di kyykzy.js
+    // LINK DONATE SAMA QRIS || UBAH PAKE PUNYA LU
     const config = {
+		qris: "https://files.catbox.moe/ew33a6.jpg",
         saweria: "https://saweria.co/asu",
         buymeacoffee: "https://www.buymeacoffee.com/asi",
         trakteer: "https://trakteer.id/usu",
-        patreon: "https://www.patreon.com/sus",
+        patreon: "https://www.patreon.com/sus"
     };
 
-	const config = {
-		whatsapp: "https://wa.me/1234567890",
-		email: "mailto:example@example.com",
-		headerTitle: "BIJI NAGA",
-		welcomeMessage: "BOREK LEK"
-	};
-
-
-    // Perbarui elemen donasi
+    // GAUSAH DI APA-APAIN NANTI EMROR LAGI
+	const QrisLink = document.getElementById("qris-link");
     const saweriaLink = document.getElementById("saweria-link");
     const buymeacoffeeLink = document.getElementById("buymeacoffee-link");
     const trakteerLink = document.querySelector("a[href*='trakteer.id']");
     const patreonLink = document.querySelector("a[href*='patreon.com']");
-    
+
+	if (QrisLink) QrisLink.href = config.qris;
     if (saweriaLink) saweriaLink.href = config.saweria;
     if (buymeacoffeeLink) buymeacoffeeLink.href = config.buymeacoffee;
     if (trakteerLink) trakteerLink.href = config.trakteer;
     if (patreonLink) patreonLink.href = config.patreon;
-    
-    // Pastikan background tetap ada meskipun elemen lain dihapus
+
+    // INI FUNGSI BEKGROND BIAR GAK ERROR
     let backgroundContainer = document.getElementById("background-container");
     if (!backgroundContainer) {
         backgroundContainer = document.createElement("div");
@@ -38,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
     backgroundContainer.style.left = "0";
     backgroundContainer.style.width = "100%";
     backgroundContainer.style.height = "100%";
-    backgroundContainer.style.zIndex = "-1";
+    backgroundContainer.style.zIndex = "-1";   // LINK BACKGROUND DIGANTI DI BAWAH SINI
     backgroundContainer.style.background = "url('https://files.catbox.moe/ew33a6.jpg') no-repeat center center fixed";
     backgroundContainer.style.backgroundSize = "cover";
 
-    // Fungsi untuk menyalin nomor pembayaran
+    // NOMOR PAYMENT LU NOH
     window.copyToClipboard = function(paymentName) {
         let paymentNumbers = {
             'Dana': '081234567890',
@@ -53,17 +48,17 @@ document.addEventListener("DOMContentLoaded", function() {
         let number = paymentNumbers[paymentName];
         if (!number) return;
 
-        navigator.clipboard.writeText(number).then(() => {
+        navigator.clipboard.writeText(number).then(() => { // YANG INI BOLEH UBAH TAPI JAN ASAL
             showNotification(`Nomor ${paymentName} Berhasil Disalin: ${number}<br>TOLONG KIRIM BUKTI TRANSFER AGAR TRANSAKSI BERJALAN LANCAR`);
         });
     };
 
-    // Fungsi menampilkan notifikasi
+    // NOTIFNYA NIH JAN DI UBAH
     function showNotification(message) {
         let notification = document.createElement("div");
         notification.innerHTML = message;
         notification.style.position = "absolute";
-        notification.style.top = "100px"; // Sesuaikan dengan posisi di bawah marquee
+        notification.style.top = "100px"; // Sesuaikan dengan posisi di bawah marquee || JAN DI APAIN
         notification.style.left = "50%";
         notification.style.transform = "translateX(-50%)";
         notification.style.padding = "10px";
@@ -75,9 +70,11 @@ document.addEventListener("DOMContentLoaded", function() {
         notification.style.textAlign = "center";
         document.body.appendChild(notification);
 
-        // Hilangkan notifikasi setelah 3 detik
+        // NOTIF ILANG KALO LEWAT 3 DETIK
         setTimeout(() => {
             notification.remove();
         }, 3000);
     }
 });
+
+//BUAT LO YANG MAU GANTI JUDUL, NAMA WEB, NOMOR WA, DAN EMAIL KE INDEX.HTML YA SOALNYA GW UDAH COBA MASUKIN SEMUA DI SINI CUMAN ERROR JIRLAH. NEXT AFDET AJA DEH YA

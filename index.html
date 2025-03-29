@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="header-title">WEBSITE PAYMENT</title>
+    <title>WEBSITE PAYMENT</title> <!-- NAMA WEB -->
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="https://files.catbox.moe/ew33a6.jpg">
+    <link rel="icon" type="image/jpg" href="https://files.catbox.moe/ew33a6.jpg"> <!-- ICON WEB || GANTI AJA KALO MAU -->
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -21,16 +21,16 @@
 
     <!-- HEADER -->
     <header>
-        <h1 id="site-title">WEBSITE PAYMENT</h1>
+        <h1 id="site-title">WEBSITE PAYMENT</h1> <!-- GANTI AJA KALO MAU -->
         <div id="marquee-container">
-            <div id="marquee-text" id="welcome-message">SELAMAT DATANG DI WEB PAYMENT SHIINKZY</div>
+            <div id="marquee-text">SELAMAT DATANG DI WEB PAYMENT SHIINKZY</div> <!-- GANTI AJA KALO MAU -->
         </div>
     </header>
     
     <!-- METODE PEMBAYARAN -->
     <section id="payment">
         <h3>Pilih Metode Pembayaran</h3>
-        
+        <!-- JAN DIUBAH NANTI ERROR || UBAHNYA DI KYYKZY.JS -->
         <button class="button uniform-button" onclick="copyToClipboard('Dana')">
             <i class="fa-solid fa-wallet"></i> Dana
         </button>
@@ -52,7 +52,7 @@
 
         <!-- DONASI LINK -->
         <h3>Donasi Link</h3>
-        
+        <!-- JAN DIUBAH NANTI ERROR || UBAHNYA DI KYYKZY.JS -->
         <a id="saweria-link" class="button small-button" href="#" target="_blank">
             <i class="fa-solid fa-donate"></i> Saweria
         </a>
@@ -75,11 +75,11 @@
         <section id="contact">
             <h3>Hubungi Saya</h3>
             
-            <a class="button small-button contact-button" id="wa-button" href="#" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> WA
+            <a class="button small-button contact-button" id="wa-button" href="https://wa.me/6281248845231" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WA <!-- LINK WA LU UBAH AJA || UBAH LINK NYA AJA -->
             </a>
-            <a class="button small-button contact-button" id="email-button" href="#">
-                <i class="fa-solid fa-envelope"></i> Email
+            <a class="button small-button contact-button" id="email-button" href="mailto:kzy.help@gmail.com">
+                <i class="fa-solid fa-envelope"></i> Email <!-- LINK IMEL LU UBAH AJA || UBAH IMEL NYA AJA -->
             </a>
         </section>
 
@@ -91,13 +91,5 @@
 
     <!-- SCRIPT -->
     <script src="kyykzy.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("wa-button").href = config.whatsapp;
-            document.getElementById("email-button").href = config.email;
-            document.getElementById("site-title").textContent = config.headerTitle;
-            document.getElementById("marquee-text").textContent = config.welcomeMessage;
-        });
-    </script>
 </body>
 </html>
